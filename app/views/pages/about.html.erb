@@ -1,5 +1,8 @@
 <div id="page_wrapper">
+  <div class="buttons">
+  <% if user_signed_in? %>
+        <button class="button"><%= link_to 'Edit', edit_page_path(@page) %></button>
+    <% end %>
+  </div>
   <p class="body"><%= simple_format(@page.body) %></p>
-
-  <p><%= link_to 'Edit', edit_page_path(@page) %></p>
 </div>
