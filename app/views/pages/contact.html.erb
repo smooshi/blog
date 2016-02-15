@@ -1,11 +1,16 @@
 <div id="page_wrapper">
-  <div id="profile_image">
-    <%= image_tag "logo.png" %>
-  </div>
+  <div class="buttons">
+    <% if user_signed_in? %>
+        <button class="button"><%= link_to 'Edit', edit_page_path(@page) %></button>
+        <% end %>
+  <p class="body"><%= simple_format(@page.body) %></p>
 
-  <div id="content">
-    <h1>Contact Info</h1>
-    <p>Text</p>
+  <div class="contact_form">
+    <form action="/webfront/contact/" name="contact-form">
+      <p><label for="id_name">Nimi:</label> <input id="id_name" maxlength="100" name="name" type="text" /></p>
+      <p><label for="id_company">Yritys:</label> <input id="id_company" maxlength="100" name="company" type="text" /></p>
+      <p><label for="id_email">Email:</label> <input id="id_email" name="email" type="email" /></p>
+      <button type="submit">LÄHETÄ</button>
+    </form><br>
   </div>
-
 </div>

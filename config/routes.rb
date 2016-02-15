@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :pages
+
   devise_for :users
   resources :posts
 
-  root to: "posts#index"
+  root to: "pages#index"
 
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'

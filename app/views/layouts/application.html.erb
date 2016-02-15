@@ -10,7 +10,7 @@
 <body>
 <div id="sidebar">
   <div id="logo">
-    <%= link_to posts_path do %>
+    <%= link_to root_path do %>
       <%= image_tag "logo.png" %>
     <% end %>
   </div>
@@ -31,11 +31,7 @@
 <div id="main_content">
   <div id="header">
 
-    <% if current_page?(posts_path) %>
-        <p>All Posts</p>
-    <% else %>
-        <%= link_to "Back to All Posts", posts_path %>
-    <% end %>
+    <p><%= link_to "Ravintelisofta", root_path %></p>
 
       <div class="buttons">
         <% if user_signed_in? %>

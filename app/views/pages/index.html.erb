@@ -1,0 +1,10 @@
+<div id="page_wrapper">
+  <h1>Ravintelisofta</h1>
+    <% @pages.each do |page| %>
+      <div id="post_wrapper">
+        <p class="body">
+          <%= simple_format(page.body) %>
+        </p>
+      </div>
+    <% end %>
+</div>
