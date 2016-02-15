@@ -1,9 +1,13 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, except: [:about, :contact, :index, :show]
+  before_action :authenticate_user!, except: [:about, :contact, :support, :index, :show]
   # GET /pages
   # GET /pages.json
   def index
     @pages = Page.all
+  end
+
+  def support
+    @page = Page.find_by_title('Support')
   end
 
   def about

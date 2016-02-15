@@ -8,3 +8,4 @@
 
 page1 = Page.create title:'About', body:"Lorem ipsum..."
 page2 = Page.create title:'Contact', body:"And now for something completely different"
+page3 = Page.create title:'Support', body:"And now for something completely different"
